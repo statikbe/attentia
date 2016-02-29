@@ -1,0 +1,7 @@
+.block {
+  @include spacing;
+  &--panel {
+    background: $gray-0;
+    padding: $rh-med;
+  }
+}

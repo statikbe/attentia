@@ -1,0 +1,17 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  @include fsRem($font-size-base);
+  font-family: $font-family-sans;
+  line-height: ($line-height-base / $font-size-base);
+}
+
+.container {
+  max-width: 720px;
+  padding: 0 ($grid-gutter / 2);
+  margin: 0 auto;
+}

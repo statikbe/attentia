@@ -1,0 +1,21 @@
+.grid {
+  margin: 0 ($grid-gutter/-2);
+  display: flex;
+  flex-flow: row nowrap;
+  > * {
+    padding: 0 ($grid-gutter/2);
+    float: left;
+  }
+  &__2 {
+    max-width: 33.333%;
+    flex: 1 0 33.333%;
+  }
+  &__3 {
+    max-width: 50%;
+    flex: 1 0 50%;
+  }
+  &__4 {
+    max-width: 66.666%;
+    flex: 1 0 66.666%;
+  }
+}

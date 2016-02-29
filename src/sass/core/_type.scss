@@ -1,0 +1,56 @@
+.heading {
+  font-family: $font-family-headings;
+  color: $color-primary;
+  font-weight: 600;
+  &:first-child {
+  margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  @extend .heading;
+}
+
+h1,
+.heading--1 {
+  @include typography($font-size-h1);
+}
+
+h2,
+.heading--2 {
+  @include typography($font-size-h2);
+}
+
+h3,
+.heading--3 {
+  @include typography($font-size-h3);
+}
+
+h4,
+.heading--4 {
+  @include typography($font-size-h4);
+}
+
+h5,
+.heading--5 {
+  @include typography($font-size-h5, false);
+}
+
+p {
+  margin: 0 0 $rh-med;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text {
+  &--lead {
+    @include fsRem(18px);
+  }
+  &--center {
+    text-align: center;
+  }
+}

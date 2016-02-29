@@ -1,0 +1,17 @@
+.section {
+  padding: $rh-med 0;
+  &--default {
+    & + & {
+      padding-top: 0;
+    }
+  }
+  &--flush {
+    padding: 0 !important;
+  }
+  &--sml {
+  	padding: $rh-sml 0;
+  }
+  &--light {
+  	background: $gray-0;
+  }
+}

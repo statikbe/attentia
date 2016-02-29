@@ -1,0 +1,42 @@
+// COLOR //
+$black: 			#000;
+$white: 			#FFF;
+
+$gray-0:            #f7f7f7;
+$gray-25:           #e7e7e7;
+
+$color-text:        rgba(0, 0, 0, .75);
+
+$color-primary:     #AF252C;
+$color-secondary:   #F9AB2A;
+
+$color-negative:    #E24C4C;
+$color-positive:    #47B56C;
+
+// TYPOGRAPHY //
+$font-family-sans:      'Open Sans', sans-serif;
+$font-family-serif:     'Georgia', serif;
+$font-family-headings:  'Signika', $font-family-sans;
+
+$font-size-h1:    36px;
+$font-size-h2:    30px;
+$font-size-h3:    25px;
+$font-size-h4:    21px;
+$font-size-h5:    18px;
+
+$font-size-root:    16px;
+$font-size-base:    16px;
+$line-height-base:  24px;
+
+$rh-base: $line-height-base;
+
+$rh-xsm: $rh-base * 0.25;
+$rh-sml: $rh-base * 0.50;
+$rh-med: $rh-base * 1.00;
+$rh-lrg: $rh-base * 1.50;
+$rh-xlr: $rh-base * 2.00;
+
+// LAYOUT //
+$container-width:   720px;
+$grid-gutter:       $rh-med;
+$grid-columns:      (3);

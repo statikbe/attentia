@@ -1,0 +1,41 @@
+.form {
+  &__item {
+    margin-bottom: $rh-med;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__checkbox,
+  &__radio {
+    input {
+      display: inline-block;
+    }
+  }
+  &__label {
+    font-weight: 600;
+    display: block;
+  }
+  &--inline {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    .form__item {
+      flex-grow: 1;
+      margin-bottom: 0;
+      margin-right: $rh-xsm;
+    }
+  }
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  background: $gray-0;
+  box-shadow: 1px 1px $gray-25;
+  border-radius: 5px;
+  border: none;
+  line-height: 24px;
+  padding: $rh-xsm $rh-sml;
+}

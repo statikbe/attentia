@@ -1,0 +1,34 @@
+//  Sets font-size in rem and px (fallback)
+@mixin fsRem ($font-size-px) {
+  font-size: $font-size-px;
+  font-size: ($font-size-px / $font-size-base) * 1rem;
+}
+
+//  Sets relative line-height (unitless)
+@mixin lh ($line-height-px, $font-size-rel: $font-size-base) {
+  line-height: ($line-height-px / $font-size-rel);
+}
+
+//  Finds next rhythm value ($rh-sml, half of base line-height)
+@function nextRh ($px) {
+  @return (floor($px / $rh-sml) + 1) * $rh-sml;
+}
+
+//  Sets font-size in rem and px (fallback), line-height and margin
+@mixin typography ($font-size-px, $margin: true) {
+  @include fsRem($font-size-px);
+  $_lh: nextRh($font-size-px);
+  @include lh($_lh, $font-size-px);
+  @if ($margin) {
+    margin: $_lh 0 if(($_lh < $rh-lrg) or ($font-size-px < 31px), $rh-sml, $rh-med);
+  } @else {
+    margin: 0;
+  }
+}
+
+//  Sets spacing between consecutive elements
+@mixin spacing ($rh: $rh-med) {
+  & + & {
+    margin-top: $rh;
+  }
+}
